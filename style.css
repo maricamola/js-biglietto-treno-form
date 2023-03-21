@@ -15,4 +15,16 @@ h1{
 
 .container {
   background-color: rgb(180, 157, 195);
+  text-align: center;
+}
+
+.row{
+  display: flex;
+  justify-content: space-evenly;
+  text-align: center;
+}
+
+.row .col{
+  display: flex;
+  flex-direction: column;
 }
