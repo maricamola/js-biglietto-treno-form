@@ -9,46 +9,56 @@
 </head>
 <body>
   
-  <div class="container">
+  <div class="container p-70">
     <h1 class="title">calcola il prezzo del tuo biglietto</h1>
       <div class="row">
 
         <div class="col">
           <label for="name">Nome Cognome</label>
-          <input type="text" id="name" placeholder="name">
+          <input type="text" id="name" placeholder="name" value="Marica">
         </div>
         <div class="col">
           <label for="kmDaPercorrere">Km da percorrere</label>
-          <input type="text" id="kmDaPercorrere" placeholder="km da percorrere">
+          <input type="text" id="kmDaPercorrere" placeholder="km da percorrere" value="100">
         </div>
         <div class="col">
           <label for="Fascia D'età">Fascia D'età</label>
           <select name="etaPasseggero" id="etaPasseggero">
-            <option value="">Maggiorenne</option>
-            <option value="">Over 65</option>
-            <option value="altro">Altro</option>
+            <option value="minorenne">Minorenne</option>
+            <option value="standard">Maggiorenne</option>
+            <option value="over">Over 65</option>
           </select>
         </div>
         
       </div>
 
-      <div class="row">
+      <div class="row-bottoni">
         <div class="col">
-          <button type="submit" value="Genera">Genera</button>
+          <button type="submit" value="Genera" id="genera">Genera</button>
         </div>
         <div class="col">
-          <button type="reset" value="reset">Annulla</button>
+          <button type="reset" value="reset" id="reset">Annulla</button>
         </div>
       </div>
   </div>
-
-  
-
-  <div class="container">
-    <div class="ticket">
-      <div class="output"></div>
+    
+    <div class="ticket p-70">
+      <h1 class="title">Il tuo biglietto</h1>
+      <table>
+        <tr>
+          <th>QR Code</th>
+          <th>Carrozza</th>
+          <th>Costo biglietto</th>
+        </tr>
+        <tr>
+          <th><img src="img/qrocde.jpg" alt="QR Code"></th>
+          <th>10</th>
+          <th><div id="output"></div></th>
+        </tr>
+      </table>
+      
     </div>
-  </div>
+
 
 
   <script src="js/script.js"></script>

@@ -6,16 +6,28 @@
 
 body{
   font-family:Arial, Helvetica, sans-serif;
-  background-color: rgb(111, 82, 160);
+  text-align: center;
+  background-image: url(../img/train2.png);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 h1{
   text-transform: uppercase;
+  padding: 30px;
 }
 
-.container {
-  background-color: rgb(180, 157, 195);
-  text-align: center;
+.p-70{
+  padding: 70px;
+}
+
+label , button {
+  margin: 10px;
+}
+
+.container , .ticket {
+  margin: 100px; 
+  background-color: rgba(255, 255, 255, 0.56);
 }
 
 .row{
@@ -27,4 +39,38 @@ h1{
 .row .col{
   display: flex;
   flex-direction: column;
+  font-size: large;
+  font-weight: bold;
 }
+
+.row-bottoni{
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+}
+
+.row-bottoni button{
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 10px;
+  font-size: 15px;
+}
+
+button:hover{
+  background-color: rgba(36, 36, 38, 0.203);
+}
+
+table{
+  display: flex;
+  justify-content: center;
+  background-color: white;
+}
+
+table , th , tr{
+  padding: 0 70px;
+}
+
+th img{
+width: 200px;
+}
+

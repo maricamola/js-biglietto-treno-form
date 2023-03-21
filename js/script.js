@@ -1,24 +1,35 @@
 // costanti
-const name = document.getElementById('name').value;
-const kmDaPercorrere = document.getElementById('kmDaPercorrere').value;
-const etaPasseggero = document.getElementById('etaPasseggero').value;
+const name = document.getElementById('name');
+const kmDaPercorrere = document.getElementById('kmDaPercorrere');
+const etaPasseggero = document.getElementById('etaPasseggero');
 const costoChilometro = 0.21;
 
-// valori che potrebbero cambiare
-let PrezzoBiglietto = kmDaPercorrere * costoChilometro;
+// valori che potrebbero cambiare => t1
 
-console.log(kmDaPercorrere, etaPasseggero);
-console.warn(PrezzoBiglietto);
+document.querySelector('#genera').addEventListener('click', function() {
 
-if (etaPasseggero <= 18) {
-  PrezzoBiglietto = PrezzoBiglietto * 0.8;
-} else if (etaPasseggero >= 65) {
-  PrezzoBiglietto = PrezzoBiglietto * 0.6;
-}
+  let PrezzoBiglietto = kmDaPercorrere.value * costoChilometro;
 
-document.querySelector('button').addEventListener('click', function(){
-  document.getElementById('Input').reset();
-})
+  if (etaPasseggero.value === 'minorenne') {
+    PrezzoBiglietto = PrezzoBiglietto * 0.8;
+  } else if (etaPasseggero.value === 'over') {
+    PrezzoBiglietto = PrezzoBiglietto * 0.6;
+  }
 
-document.getElementById('output').innerHTML = `Il costo del biglietto è ${PrezzoBiglietto.toFixed(2)} €`;
+  document.getElementById('output').innerHTML = `Il costo del biglietto è ${PrezzoBiglietto.toFixed(2)} €`;
+});
 
+
+document.querySelector('#reset').addEventListener('click', function(){
+  name.value = "";
+  kmDaPercorrere.value = "";
+  document.querySelectorAll('input').reset();
+});
+
+
+
+
+
+// t0 => quando si carica la pagina
+
+// t1 => quando clicchiamo sul pulsante
