@@ -14,7 +14,7 @@ body{
 
 h1{
   text-transform: uppercase;
-  padding: 30px;
+  padding-bottom: 30px;
 }
 
 .p-70{
@@ -67,7 +67,7 @@ table{
 }
 
 table , th , tr{
-  padding: 0 70px;
+  padding: 10px 100px;
 }
 
 th img{
