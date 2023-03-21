@@ -1,0 +1,18 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family:Arial, Helvetica, sans-serif;
+  background-color: rgb(111, 82, 160);
+}
+
+h1{
+  text-transform: uppercase;
+}
+
+.container {
+  background-color: rgb(180, 157, 195);
+}
